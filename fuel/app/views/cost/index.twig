@@ -1,0 +1,25 @@
+    <div class="container">
+        <p>Cost Management</p>
+
+        {% for project in m_project %}
+        <article>
+        <h1>{{ project.name }}</h1>
+        <ul>
+            <li>{{ project.eyes_id }}</li>
+            <li>{{ project.m_project_status.name }}</li>
+            <li>{{ project.plan_cost }}</li>
+            <li>{{ project.act_cost }}</li>
+            <li>{{ project.date_from }}</li>
+            <li>{{ project.date_to }}</li>
+        </ul>
+        <ul>
+            {% for member in project.t_project %}
+            <li>{{ member.m_user.nickname }}</li>
+            <li>{{ member.m_post.name }}</li>
+            {% endfor %}
+        </ul>
+        </article>
+        {% else %}
+        <p>No project</p>
+        {% endfor %}
+    </div>

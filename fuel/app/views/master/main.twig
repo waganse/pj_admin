@@ -1,0 +1,41 @@
+<div id="main-content">
+    <div class="search-container">
+
+    </div>
+
+    <div class="control-container row">
+        <div class="col-md-8">
+<!--             <a class="btn btn-default js-search"><i class="glyphicon glyphicon-search"></i>Search</a>
+ -->        </div>
+        <div class="col-md-4 al-r">
+            <span>Total: <span class="js-total"></span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="button" class="btn btn-default js-create"><i class="glyphicon glyphicon-edit"></i>Add</button>
+        </div>
+    </div>
+
+    <table id="list-container" class="table table-striped">
+        <thead id="title"></thead>
+        <tbody id="item-list"></tbody>
+    </table>
+</div>
+
+<script>
+var M_HOLIDAY = [
+{% for item in m_calendar %}
+{% if loop.last == true %}
+{ id: {{ item.id }}, name: '{{ item.item }}', description: '{{ item.description }}' }
+{% else %}
+{ id: {{ item.id }}, name: '{{ item.item }}', description: '{{ item.description }}' },
+{% endif %}
+{% endfor %}
+],
+M_BU_CATEGORY = [
+{% for item in m_bu_category %}
+{% if loop.last == true %}
+{ id: {{ item.id }}, name: '{{ item.item }}', description: '{{ item.description }}' }
+{% else %}
+{ id: {{ item.id }}, name: '{{ item.item }}', description: '{{ item.description }}' },
+{% endif %}
+{% endfor %}
+];
+</script>

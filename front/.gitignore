@@ -1,0 +1,24 @@
+# OS/Editor
+.DS_Store
+Thumbs.db
+.idea/
+
+# Node.js
+node_modules/
+npm-debug.log
+
+# Yeoman
+.yo-rc.json
+
+# Bower
+bower_components/
+
+# SASS
+.sass-cache/
+
+# grunt-html-validation
+validation-status.json
+validation-report.json
+
+# Excluded Files
+.tmp/

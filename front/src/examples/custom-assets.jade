@@ -1,0 +1,44 @@
+extends /_templates/_layout
+
+block variables
+  - var lang = 'en'
+  - var siteName = ''
+  - var title = 'generator-rff'
+
+block styles
+  link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Raleway')
+  // build:css /examples/custom.css
+  // bower:css
+  // endbower
+  link(rel='stylesheet', href='/css/app.css')
+  // endbuild
+
+block scripts
+  // build:js /examples/custom.js
+  // bower:js
+  // endbower
+  script(src='/js/main.js')
+  // endbuild
+
+block body
+  .page
+    .content
+      .container
+        .section
+          h1.heading Build Custom Assets
+          p
+            | This page includes custom CSS and JavaScript by using <a href="https://github.com/yeoman/grunt-usemin">grunt-usemin</a>.
+            br
+            | In the top page, script is distributed to "/js/app.js". But the script for this page goes to "/example/custom.js"
+          .code-block
+            pre
+              code
+                | // build:js /examples/custom.js
+                | script(src='/bower_components/jquery/dist/jquery.js')
+                | script(src='/js/main.js')
+                | // endbuild
+          p Compiles to :
+          .code-block
+            pre
+              code
+                | &lt;script src="/examples/custom.js"&gt;&lt;/script&gt;

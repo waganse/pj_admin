@@ -1,0 +1,121 @@
+extends /_templates/_layout
+
+block variables
+  - var lang = 'en'
+  - var siteName = ''
+  - var title = 'generator-rff'
+
+block styles
+  link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Raleway')
+  // build:css /css/app.css
+  // bower:css
+  // endbower
+  link(rel='stylesheet', href='/css/app.css')
+  // endbuild
+
+block scripts
+  // build:js /js/app.js
+  // bower:js
+  // endbower
+  script(src='/js/main.js')
+  // endbuild
+
+block body
+  .page
+    a.fork-ribbon(href='https://git.dev.rakuten.com/projects/RFF/repos/generator-rff/browse')
+      img(src='/img/ribbon-fork-me.png', alt='Fork me on Stash' width='128', height='128')
+    .hero
+      h1.title generator-rff
+      p.description
+        | Yeoman generator for scaffolding
+        br
+        | structural and high performance web site.
+      .code-block
+        pre
+          code $ npm install -g git+https://git.dev.rakuten.com/scm/rff/generator-rff.git
+    .content
+      .container
+        .section
+          h2.heading Overview
+          h3 Built-in Features
+          ul
+            li Preview Server with BrowserSync
+            li Validations (W3C HTML Validation, CSS Lint, JSHint)
+            li Concatenation of CSS/JS Files
+            li Image Optimization
+            li CSS Sprites Generator
+            li Library Management with Bower
+          h3 Supported Languages and Frameworks
+          ul
+            li
+              b.term-aligned Markup:
+              | HTML, Jade
+            li
+              b.term-aligned Stylesheet:
+              | CSS, Sass, Less, Stylus
+            li
+              b.term-aligned Script:
+              | JavaScript, CoffeeScript
+            li
+              b.term-aligned Test:
+              | Mocha, Jasmine
+          h3 Optional Features
+          ul
+            li Minification of CSS and JavaScript
+            li CSS Autoprefixing
+            li Static Assets Revisioning
+            li SSI Support in Preview Server
+        .section
+          h2.heading Quick Start
+          .code-block
+            pre
+              code
+                | $ npm install -g yo
+                | $ npm install -g git+https://git.dev.rakuten.com/scm/rff/generator-rff.git
+                | $ mkdir my-new-project &amp;&amp; cd $_
+                | $ yo rff
+          div
+            | &raquo;&nbsp;
+            a(href='https://git.dev.rakuten.com/projects/RFF/repos/generator-rff/browse')
+              b Learn More
+        .section
+          h2.heading Friends
+          .cols-3
+            .col
+              .item
+                .image
+                  a(href='http://yeoman.io/')
+                    span.sprite.sprite-yeoman
+                .text
+                  .term
+                    a(href='http://yeoman.io/') Yeoman
+                  .description The web's scaffolding tool for modern webapps.
+            .col
+              .item
+                .image
+                  a(href='http://gruntjs.com/')
+                    span.sprite.sprite-grunt
+                .text
+                  .term
+                    a(href='http://gruntjs.com/') Grunt
+                  .description The JavaScript task runner to automate mundane work.
+            .col
+              .item
+                .image
+                  a(href='http://bower.io/')
+                    span.sprite.sprite-bower
+                .text
+                  .term
+                    a(href='http://bower.io/') Bower
+                  .description The package manager for front-end development.
+    .footer
+      div
+        <span class="text-emph">R</span>akuten <span class="text-emph">F</span>ront-end <span class="text-emph">F</span>ramework Project
+      div
+        a(href='https://confluence.dev.rakuten.com/confluence/display/RFF') Confluence
+        | &nbsp;&middot;&nbsp;
+        a(href='https://jira.dev.rakuten.com/jira/browse/RFF') JIRA
+        | &nbsp;&middot;&nbsp;
+        a(href='https://git.dev.rakuten.com/projects/RFF') Stash
+        | &nbsp;&middot;&nbsp;
+        a(href='mailto:cwd-rff-developers@mail.rakuten.com') Email

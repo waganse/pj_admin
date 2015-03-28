@@ -1,0 +1,91 @@
+<div id="main-content">
+    <div class="search-container">
+
+    </div>
+
+    <div class="control-container row">
+        <div class="col-md-8">
+<!--             <a class="btn btn-default js-search"><i class="glyphicon glyphicon-search"></i>Search</a>
+ -->        </div>
+        <div class="col-md-4 al-r">
+            <span>Total: <span class="js-total"></span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="button" class="btn btn-default js-create"><i class="glyphicon glyphicon-edit"></i>Add</button>
+        </div>
+    </div>
+    <div class="list-container">
+        <div id="vlist" class="vlist"></div>
+        <div id="hlist" class="hlist">
+        </div>
+    </div>
+</div>
+
+<script>
+var M_STATUS = [
+{% for status in m_project_status_external %}
+{% if loop.last == true %}
+{ id: {{ status.id }}, name: '{{ status.item }}' }
+{% else %}
+{ id: {{ status.id }}, name: '{{ status.item }}' },
+{% endif %}
+{% endfor %}
+],
+M_BU = [
+{% for bu in m_bu %}
+{% if loop.last == true %}
+{ id: {{ bu.id }}, name: '{{ bu.item }}' }
+{% else %}
+{ id: {{ bu.id }}, name: '{{ bu.item }}' },
+{% endif %}
+{% endfor %}
+],
+M_COMPANY = [
+{% for company in m_company %}
+{% if loop.last == true %}
+{ id: {{ company.id }}, name: '{{ company.name }}' }
+{% else %}
+{ id: {{ company.id }}, name: '{{ company.name }}' },
+{% endif %}
+{% endfor %}
+],
+M_USER = [
+{% for user in m_user %}
+{% if loop.last == true %}
+{ id: {{ user.id }}, name: '{{ user.nickname }}' }
+{% else %}
+{ id: {{ user.id }}, name: '{{ user.nickname }}' },
+{% endif %}
+{% endfor %}
+],
+M_TYPE = [
+{% for type in m_type %}
+{% if loop.last == true %}
+{ id: {{ type.id }}, name: '{{ type.item }}' }
+{% else %}
+{ id: {{ type.id }}, name: '{{ type.item }}' },
+{% endif %}
+{% endfor %}
+],
+M_PAYMENT_BY = [
+{% for pay in m_payment_by_external %}
+{% if loop.last == true %}
+{ id: {{ pay.id }}, name: '{{ pay.item }}' }
+{% else %}
+{ id: {{ pay.id }}, name: '{{ pay.item }}' },
+{% endif %}
+{% endfor %}
+],
+M_HOLIDAY = [
+{% for item in m_calendar %}
+{% if loop.last == true %}
+{ id: {{ item.id }}, name: '{{ item.item }}', description: '{{ item.description }}' }
+{% else %}
+{ id: {{ item.id }}, name: '{{ item.item }}', description: '{{ item.description }}' },
+{% endif %}
+{% endfor %}
+],
+M_CONFIG = {
+{% for item in m_config %}
+cost_unit: {{ item.cost_unit }}
+{% endfor %}
+};
+</script>

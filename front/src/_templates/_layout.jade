@@ -1,0 +1,29 @@
+block variables
+doctype html
+html(lang=lang, prefix=prefix)
+  head
+    meta(charset='UTF-8')
+    title= (siteName ? siteName + ': ' : '') + title
+    if description
+      meta(name='description', content=description)
+    if keywords
+      meta(name='keywords', content=keywords)
+    if ogTitle
+      meta(property='og:title', content=ogTitle)
+    if ogType
+      meta(property='og:type', content=ogType)
+    if ogDescription
+      meta(property='og:description', content=ogDescription)
+    if ogImage
+      meta(property='og:image', content=ogImage)
+    if ogSiteName
+      meta(property='og:site_name', content=ogSiteName)
+    if fbAppId
+      meta(property='fb:app_id', content=fbAppId)
+    meta(name='viewport', content='width=device-width')
+    if canonical
+      link(rel='canonical', href=canonical)
+    block styles
+  body
+    block body
+    block scripts

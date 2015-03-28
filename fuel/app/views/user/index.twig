@@ -1,0 +1,49 @@
+<div id="main-content">
+    <div class="search-container">
+
+    </div>
+
+    <div class="control-container row">
+        <div class="col-md-8">
+<!--             <a class="btn btn-default js-search"><i class="glyphicon glyphicon-search"></i>Search</a>
+ -->        </div>
+        <div class="col-md-4 al-r">
+            <span>Total: <span class="js-total"></span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="button" class="btn btn-default js-create"><i class="glyphicon glyphicon-edit"></i>Add</button>
+        </div>
+    </div>
+    <div class="list-container">
+        <div id="vlist" class="vlist"></div>
+        <div id="hlist" class="hlist"></div>
+    </div>
+</div>
+
+<script>
+var M_ROLE = [
+{% for role in m_role %}
+{% if loop.last == true %}
+{ id: {{ role.id }}, name: '{{ role.item }}' }
+{% else %}
+{ id: {{ role.id }}, name: '{{ role.item }}' },
+{% endif %}
+{% endfor %}
+];
+var M_TEAM = [
+{% for team in m_team %}
+{% if loop.last == true %}
+{ id: {{ team.id }}, name: '{{ team.item }}' }
+{% else %}
+{ id: {{ team.id }}, name: '{{ team.item }}' },
+{% endif %}
+{% endfor %}
+];
+var M_STATUS = [
+{% for status in m_user_status %}
+{% if loop.last == true %}
+{ id: {{ status.id }}, name: '{{ status.item }}' }
+{% else %}
+{ id: {{ status.id }}, name: '{{ status.item }}' },
+{% endif %}
+{% endfor %}
+];
+</script>

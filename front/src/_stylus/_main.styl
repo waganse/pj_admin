@@ -1,0 +1,156 @@
+// Variables
+container-width = 750px
+orange = #d93620
+blue = #3388bb
+blue-dark = #116699
+green = #ccee66
+color-bg = #f6f8fb
+
+// Mixins
+caption-font()
+  font-family Raleway, sans-serif
+  font-weight 300
+
+// Basic elements
+body
+  font-size 14px
+  font-family "Helvetica Neue", Helvetica, Arial, sans-serif
+  line-height 1.5
+  color #44464c
+  background-color color-bg
+
+a
+  text-decoration none
+  color blue
+  &:hover
+    color blue-dark
+
+code
+  font-size 13px
+  font-family Menlo, Consolas, "Liberation Mono", Courier, monospace
+
+// Layouts
+.page
+  border-top 6px solid orange
+
+.container
+  width container-width
+  margin 0 auto
+
+// Components
+.section
+  margin-bottom 30px
+
+.heading
+  margin 0 0 15px
+  font-size 36px
+  caption-font()
+  color orange
+
+.code-block
+  margin 15px 0
+  padding 10px 20px
+  border-radius 4px
+  color #ccee66
+  background-color #333333
+  pre
+    margin 0
+
+.term-aligned
+  display inline-block
+  min-width 6em
+  margin-right 0.3em
+
+// Grid
+.cols-3
+  overflow hidden
+  .col
+    float left
+    width 30%
+    margin-left 5%
+    &:first-child
+      margin-left 0
+
+// Items
+.item
+  .text
+    margin-top 10px
+  .term
+    margin-bottom 5px
+    font-weight bold
+    font-size 20px
+
+// Text
+.text-emph
+  color orange
+
+.text-sub
+  color #a3a9ae
+
+// Sprites
+.sprite
+  display inline-block
+
+// Utilities
+.grayscale
+  filter grayscale(100%)
+
+// Ribbon
+.fork-ribbon
+  display block
+  position fixed
+  z-index 2
+  top 0
+  right 0
+
+// Hero unit
+.hero
+  position fixed
+  z-index 0
+  width 100%
+  margin-top -6px
+  padding 30px 0 50px
+  border-top 6px solid orange
+  text-align center
+  color #ffffff
+  background-color #3c3c3c
+  background-image linear-gradient(to bottom, #3c3c3c, #4f4f4f)
+  background-repeat no-repeat
+  .title
+    margin 45px 0
+    font-size 72px
+    caption-font()
+    line-height 1
+  .description
+    margin 30px 0
+    font-size 22px
+    caption-font()
+    line-height 1.6
+    color #c0c9cc
+  .code-block
+    margin 30px 0
+    padding 10px
+    border-radius 0
+    pre
+      margin 0
+    code
+      font-size 14px
+
+// Content
+.content
+  position relative
+  z-index 1
+  padding 40px 0
+  background-color color-bg
+
+.hero + .content
+  margin-top 400px
+
+// Footer
+.footer
+  position relative
+  z-index 1
+  padding 50px 0
+  text-align center
+  color #86898c
+  background-color #e7eaee

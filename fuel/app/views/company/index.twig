@@ -1,0 +1,31 @@
+<div id="main-content">
+    <div class="search-container">
+
+    </div>
+
+    <div class="control-container row">
+        <div class="col-md-8">
+<!--             <a class="btn btn-default js-search"><i class="glyphicon glyphicon-search"></i>Search</a>
+ -->        </div>
+        <div class="col-md-4 al-r">
+            <span>Total: <span class="js-total"></span></span>&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="button" class="btn btn-default js-create"><i class="glyphicon glyphicon-edit"></i>Add</button>
+        </div>
+    </div>
+    <div class="list-container">
+        <div id="vlist" class="vlist"></div>
+        <div id="hlist" class="hlist"></div>
+    </div>
+</div>
+
+<script>
+var M_STATUS = [
+{% for status in m_company_status %}
+{% if loop.last == true %}
+{ id: {{ status.id }}, name: '{{ status.item }}' }
+{% else %}
+{ id: {{ status.id }}, name: '{{ status.item }}' },
+{% endif %}
+{% endfor %}
+];
+</script>

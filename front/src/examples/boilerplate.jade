@@ -1,0 +1,30 @@
+extends /_templates/_layout
+
+block variables
+  - var title = '[title]'
+  - var description = '[description]'
+  - var keywords = '[keywords(comma separated)]'
+  - var prefix = 'og: http://ogp.me/ns# fb: http://www.facebook.com/2008/fbml'
+  - var ogTitle = '[service name]: [title]'
+  - var ogType = '[]'
+  - var ogDescription = '[]'
+  - var ogImage = '[]'
+  - var ogSiteName = '[]'
+  - var fbAppId = '[]'
+  //- var canonical = '[Canonicalized URL]'
+
+block styles
+  // build:css /css/app.css
+  // bower:css
+  // endbower
+  link(rel='stylesheet', href='/css/app.css')
+  // endbuild
+
+block scripts
+  // build:js /js/app.js
+  // bower:js
+  // endbower
+  script(src='/js/main.js')
+  // endbuild
+
+block body

@@ -1,0 +1,26 @@
+<div id="login-container">
+    <form role="form" action="/labo/pj_admin/auth/login" accept-charset="utf-8" method="post">
+        <div class="form-group">
+            <label for="username">User ID</label>
+            <input type="text" class="form-control" id="username" placeholder="Enter user ID" name="username">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Password" name="password">
+        </div>
+<!--         <div class="text-center">
+            <label>
+                <input type="checkbox"> Remember me
+            </label>
+        </div>
+ -->
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Log in</button>
+        </div>
+        <input type="hidden" name="{{ token_name }}" value="{{ token }}">
+    </form>
+    {% if message %}
+    <p class="err-msg text-danger">{{ message }}</p>
+    {% endif %}
+</div>
+
