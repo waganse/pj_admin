@@ -1,0 +1,160 @@
+@import "compass/utilities";
+@import "compass/css3";
+
+@mixin clearfix {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+    *zoom: 1;
+}
+
+body {
+    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "Meiryo", "メイリオ", "Osaka", "MS PGothic", arial, helvetica, sans-serif;
+    color: #555555;
+}
+
+h1 {
+    padding: 0 10px;
+    font-size: 24px;
+
+    small {
+        @include inline-block();
+        padding: 0 10px;
+        font-size: 12px;
+    }
+}
+
+.col {
+    span {
+        display: block;
+    }
+}
+
+.col-1 {
+    span {
+        width: 30px;
+    }
+}
+
+.col-2 {
+    span {
+        width: 60px;
+    }
+}
+
+.col-3 {
+    span {
+        width: 90px;
+    }
+}
+
+.col-4 {
+    span {
+        width: 120px;
+    }
+}
+
+.col-5 {
+    span {
+        width: 150px;
+    }
+}
+
+.col-6 {
+    span {
+        width: 180px;
+    }
+}
+
+.col-7 {
+    span {
+        width: 210px;
+    }
+}
+
+.col-8 {
+    span {
+        width: 240px;
+    }
+}
+
+.col-9 {
+    span {
+        width: 270px;
+    }
+}
+
+/** MODAL **/
+.modal-content {
+    .err {
+        background: #F38E92;
+
+    }
+}
+
+.modal {
+    .modal-body {
+        padding-bottom: 0;
+    }
+
+    .timestamp {
+        padding: 0 20px;
+
+        p {
+            margin: 0;
+            text-align: right;
+        }
+
+        small {
+
+        }
+    }
+}
+
+.al-c {
+    text-align: center;
+}
+
+.al-r {
+    text-align: right;
+}
+
+.cf {
+    @include clearfix();
+}
+
+.form-group {
+    position: relative;
+
+    .ui-datepicker-trigger {
+        position: absolute;
+        top: 32px;
+        right: 25px;
+        cursor: pointer;
+    }
+}
+
+.ui-datepicker-calendar {
+    .holiday {
+        a {
+            background: #800b0b;
+        }
+    }
+
+    .sunday {
+        a {
+            background: #800b0b;
+        }
+    }
+
+    .saturday {
+        a {
+            background: #0b2c80;
+        }
+    }
+}

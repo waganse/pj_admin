@@ -1,0 +1,19 @@
+@import "compass/utilities";
+@import "compass/css3";
+@import "../common";
+
+$border-color: #bbc0bb;
+
+#main {
+    margin: 95px 0;
+}
+
+#master-list {
+    p {
+        margin: 0;
+    }
+
+    .item {
+        width: 40%;
+    }
+}

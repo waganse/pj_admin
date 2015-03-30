@@ -12429,122 +12429,122 @@ define('const',[],function() {
          * @member CONST
          * @property {String} PROJECT_ROOT project root directory
          */
-        'PROJECT_ROOT': '/admin/',
+        'PROJECT_ROOT': '/labo/pj_admin',
         /**
          * @member CONST
          * @property {String} API_USER api for user url
          */
-        'API_USER': '/admin/data/user/data/',
+        'API_USER': this.PROJECT_ROOT + '/data/user/data/',
         /**
          * @member CONST
          * @property {String} API_COMPANY api for company url
          */
-        'API_COMPANY': '/admin/data/company/data/',
+        'API_COMPANY': '/labo/pj_admin/data/company/data/',
         /**
          * @member CONST
          * @property {String} API_OUT_PROJECT api for OUTSOURCE PROJECT url
          */
-        'API_OUT_PROJECT': '/admin/data/oproject/data/',
+        'API_OUT_PROJECT': this.PROJECT_ROOT + '/data/oproject/data/',
         /**
          * @member CONST
          * @property {String} API_MASTER_BU api for master BU url
          */
-        'API_MASTER_BU': '/admin/data/master/bu/data/',
+        'API_MASTER_BU': this.PROJECT_ROOT + '/data/master/bu/data/',
         /**
          * @member CONST
          * @property {String} API_MASTER_BU_CATEGORY api for master BU CATEGORY url
          */
-        'API_MASTER_BU_CATEGORY': '/admin/data/master/bucategory/data/',
+        'API_MASTER_BU_CATEGORY': this.PROJECT_ROOT + '/data/master/bucategory/data/',
         /**
          * @member CONST
          * @property {String} API_MASTER_CALENDAR api for master CALENDAR url
          */
-        'API_MASTER_CALENDAR': '/admin/data/master/calendar/data/',
+        'API_MASTER_CALENDAR': this.PROJECT_ROOT + '/data/master/calendar/data/',
         /**
          * @member CONST
          * @property {String} API_MASTER_COMPANY_SCALE api for master COMPANY SCALE url
          */
-        'API_MASTER_COMPANY_SCALE': '/admin/data/master/cscale/data/',
+        'API_MASTER_COMPANY_SCALE': this.PROJECT_ROOT + '/data/master/cscale/data/',
         /**
          * @member CONST
          * @property {String} API_MASTER_COMPANY_STATUS api for master COMPANY STATUS url
          */
-        'API_MASTER_COMPANY_STATUS': '/admin/data/master/cstatus/data/',
+        'API_MASTER_COMPANY_STATUS': this.PROJECT_ROOT + '/data/master/cstatus/data/',
         /**
          * @member CONST
          * @property {String} API_MASTER_DEVICE api for master DEVICE url
          */
-        'API_MASTER_DEVICE': '/admin/data/master/device/data/',
+        'API_MASTER_DEVICE': this.PROJECT_ROOT + '/data/master/device/data/',
         /**
          * @member CONST
          * @property {String} API_MASTER_HOLIDAY_STATUS api for master HOLIDAY STATUS url
          */
-        'API_MASTER_HOLIDAY_STATUS': '/admin/data/master/hstatus/data/',
+        'API_MASTER_HOLIDAY_STATUS': this.PROJECT_ROOT + '/data/master/hstatus/data/',
         /**
          * @member CONST
          * @property {String} API_MASTER_KEYWORD api for master KEYWORD url
          */
-        'API_MASTER_KEYWORD': '/admin/data/master/keyword/data/',
+        'API_MASTER_KEYWORD': this.PROJECT_ROOT + '/data/master/keyword/data/',
         /**
          * @member CONST
          * @property {String} API_MASTER_PAYMENT api for master PAYMENT url
          */
-        'API_MASTER_PAYMENT': '/admin/data/master/payment/data/',
+        'API_MASTER_PAYMENT': this.PROJECT_ROOT + '/data/master/payment/data/',
         /**
          * @member CONST
          * @property {String} API_MASTER_POST api for master POST url
          */
-        'API_MASTER_POST': '/admin/data/master/post/data/',
+        'API_MASTER_POST': this.PROJECT_ROOT + '/data/master/post/data/',
         /**
          * @member CONST
          * @property {String} API_MASTER_PROJECT_STATUS api for master PROJECT STATUS url
          */
-        'API_MASTER_PROJECT_STATUS': '/admin/data/master/pstatus/data/',
+        'API_MASTER_PROJECT_STATUS': this.PROJECT_ROOT + '/data/master/pstatus/data/',
         /**
          * @member CONST
          * @property {String} API_MASTER_OUT_PROJECT_STATUS api for master OUTSOURCE PROJECT STATUS url
          */
-        'API_MASTER_OUT_PROJECT_STATUS': '/admin/data/master/pstatusext/data/',
+        'API_MASTER_OUT_PROJECT_STATUS': this.PROJECT_ROOT + '/data/master/pstatusext/data/',
         /**
          * @member CONST
          * @property {String} API_MASTER_PROJECT_TYPE api for master PROJECT TYPE url
          */
-        'API_MASTER_PROJECT_TYPE': '/admin/data/master/ptype/data/',
+        'API_MASTER_PROJECT_TYPE': this.PROJECT_ROOT + '/data/master/ptype/data/',
         /**
          * @member CONST
          * @property {String} API_MASTER_OUT_PROJECT_TYPE api for master OUTSOURCE PROJECT TYPE url
          */
-        'API_MASTER_OUT_PROJECT_TYPE': '/admin/data/master/ptypeext/data/',
+        'API_MASTER_OUT_PROJECT_TYPE': this.PROJECT_ROOT + '/data/master/ptypeext/data/',
         /**
          * @member CONST
          * @property {String} API_MASTER_ROLE api for master ROLE url
          */
-        'API_MASTER_ROLE': '/admin/data/master/role/data/',
+        'API_MASTER_ROLE': this.PROJECT_ROOT + '/data/master/role/data/',
         /**
          * @member CONST
          * @property {String} API_MASTER_TASK api for master TASK url
          */
-        'API_MASTER_TASK': '/admin/data/master/task/data/',
+        'API_MASTER_TASK': this.PROJECT_ROOT + '/data/master/task/data/',
         /**
          * @member CONST
          * @property {String} API_MASTER_TASK_CATEGORY api for master TASK_CATEGORY url
          */
-        'API_MASTER_TASK_CATEGORY': '/admin/data/master/tcategory/data/',
+        'API_MASTER_TASK_CATEGORY': this.PROJECT_ROOT + '/data/master/tcategory/data/',
         /**
          * @member CONST
          * @property {String} API_MASTER_TASK_CHILD_CATEGORY api for master TASK_CHILD_CATEGORY url
          */
-        'API_MASTER_TASK_CHILD_CATEGORY': '/admin/data/master/tccategory/data/',
+        'API_MASTER_TASK_CHILD_CATEGORY': this.PROJECT_ROOT + '/data/master/tccategory/data/',
         /**
          * @member CONST
          * @property {String} API_MASTER_TEAM api for master TEAM url
          */
-        'API_MASTER_TEAM': '/admin/data/master/team/data/',
+        'API_MASTER_TEAM': this.PROJECT_ROOT + '/data/master/team/data/',
         /**
          * @member CONST
          * @property {String} API_MASTER_USER_STATUS api for master USER_STATUS url
          */
-        'API_MASTER_USER_STATUS': '/admin/data/master/ustatus/data/'
+        'API_MASTER_USER_STATUS': this.PROJECT_ROOT + '/data/master/ustatus/data/'
     };
 
     return CONST;

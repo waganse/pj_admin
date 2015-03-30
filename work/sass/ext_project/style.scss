@@ -1,0 +1,95 @@
+@import "compass/utilities";
+@import "compass/css3";
+@import "../common";
+
+$border-color: #bbc0bb;
+
+#main {
+    margin: 55px 0;
+}
+
+.search-container {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 100px;
+    margin-left: -300px;
+    background: #f1f1f1;
+    z-index: 1;
+
+    &.open {
+        margin-left: 0;
+        transition: margin-left 1s linear 0;
+    }
+}
+.control-container {
+    margin: 0;
+    padding: 15px 0;
+}
+
+.list-container {
+    @include clearfix();
+}
+
+.list-htitle {
+    > div {
+        display: table-cell;
+        padding: 5px;
+        vertical-align: middle;
+        border-top: 1px solid $border-color;
+        border-right: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
+        background: #f3f3f3;
+
+        &.no-bdr-r {
+            border-right: 1px solid transparent;
+        }
+    }
+}
+
+.vlist {
+    float: left;
+    width: 626px;
+
+    .vitem {
+        height: 70px;
+        border-bottom: 1px solid $border-color;
+
+        > div {
+            display: table-cell;
+            height: 70px;
+            padding: 0 5px;
+            vertical-align: middle;
+            border-right: 1px solid $border-color;
+        }
+    }
+}
+
+.hlist {
+    margin-left: 626px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    border-left: 1px solid $border-color;
+
+    .hitem {
+        height: 70px;
+
+        > div {
+            display: table-cell;
+            height: 70px;
+            vertical-align: middle;
+            padding: 0 5px;
+            border-right: 1px solid $border-color;
+            border-bottom: 1px solid $border-color;
+
+            > span {
+                display: block;
+                word-wrap: break-word;
+            }
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+}
