@@ -28,7 +28,7 @@ abstract class Controller_Base extends Controller_Template {
             $this->template->domain = $this->domain;
             $this->template->token = $this->token;
             $this->template->token_name = $this->token_name;
-            $this->template->token_script = Security::js_fetch_token();;
+            $this->template->token_script = Security::js_fetch_token();
             $this->current_user = Model_M_User::find(Arr::get(Auth::get_user_id(), 1));
 
             // Set a global variable so views can use it

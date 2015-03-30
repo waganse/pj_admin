@@ -4,7 +4,7 @@ class Model_M_Company_Status extends \Orm\Model_Soft
 {
 	protected static $_properties = array(
 		'id',
-		'item',
+		'name',
 		'description',
 		'created_at',
 		'updated_at',
