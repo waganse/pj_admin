@@ -8,7 +8,7 @@
  * @version    1.7
  * @author     Fuel Development Team
  * @license    MIT License
- * @copyright  2010 - 2014 Fuel Development Team
+ * @copyright  2010 - 2015 Fuel Development Team
  * @link       http://fuelphp.com
  */
 
@@ -57,7 +57,7 @@ class Auth_Login_Simpleauth extends \Auth_Login_Driver
 		'username' => 'guest',
 		'group' => '0',
 		'login_hash' => false,
-		'email' => false
+		'email' => false,
 	);
 
 	/**
@@ -196,6 +196,13 @@ class Auth_Login_Simpleauth extends \Auth_Login_Driver
 
 		\Session::set('username', $this->user['username']);
 		\Session::set('login_hash', $this->create_login_hash());
+
+		// and rotate the session id, we've elevated rights
+		\Session::instance()->rotate();
+
+		// register so Auth::logout() can find us
+		Auth::_register_verified($this);
+
 		return true;
 	}
 
@@ -222,7 +229,7 @@ class Auth_Login_Simpleauth extends \Auth_Login_Driver
 	 * @param   Array
 	 * @return  bool
 	 */
-	public function create_user($username, $password, $email, $group = 1, Array $profile_fields = array(), $first_name = '', $last_name = '', $nickname = '', $role = 1, $status = 1)
+	public function create_user($username, $password, $email, $group = 1, Array $profile_fields = array())
 	{
 		$password = trim($password);
 		$email = filter_var(trim($email), FILTER_VALIDATE_EMAIL);
@@ -256,16 +263,9 @@ class Auth_Login_Simpleauth extends \Auth_Login_Driver
 			'email'           => $email,
 			'group'           => (int) $group,
 			'profile_fields'  => serialize($profile_fields),
-			'first_name'      => $first_name,
-			'last_name'       => $last_name,
-			'nickname'        => $nickname,
-			'role'            => $role,
-			'status'          => $status,
-			'login_hash'      => '',
 			'last_login'      => 0,
-			'updated_at'      => 0,
+			'login_hash'      => '',
 			'created_at'      => \Date::forge()->get_timestamp(),
-			'deleted_at'      => 0
 		);
 		$result = \DB::insert(\Config::get('simpleauth.table_name'))
 			->set($user)

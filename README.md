@@ -1,4 +1,8 @@
-#FuelPHP
+#Project Administration Tool
+
+* Run "php composer.phar update"
+* Run "chmod -R 777 pj_admin"
+* Edit "/packages/parser/config/parser.php" Twig auto encoding -> false
 
 * Version: 1.7.2
 * [Website](http://fuelphp.com/)
